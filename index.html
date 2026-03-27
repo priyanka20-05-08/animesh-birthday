@@ -1,128 +1,46 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Happy Birthday</title>
-
-<style>
-body {
-margin:0;
-font-family: Arial;
-background: black;
-color:white;
-text-align:center;
-overflow:hidden;
-}
-
-.screen {
-display:none;
-height:100vh;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-}
-
-.active {
-display:flex;
-}
-
-.glow {
-color:pink;
-text-shadow:0 0 20px pink;
-}
-
-button {
-padding:10px 20px;
-font-size:18px;
-border:none;
-border-radius:10px;
-background:pink;
-color:black;
-margin-top:20px;
-}
-
-.photo {
-width:250px;
-border-radius:20px;
-box-shadow:0 0 20px pink;
-}
-
-/* HEART ANIMATION */
-.hearts span {
-position:absolute;
-color:red;
-font-size:20px;
-animation: float 5s linear infinite;
-}
-
-@keyframes float {
-0% {transform: translateY(100vh);}
-100% {transform: translateY(-10vh);}
-}
-
-.cake {
-font-size:60px;
-}
-</style>
-
+  <title>Happy Birthday 💖</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- SCREEN 1 -->
+<!-- MUSIC -->
+<audio id="music" src="music.mp3"></audio>
+
+<!-- Screen 1 -->
 <div class="screen active" id="screen1">
-<h1 class="glow">Loading your birthday surprise... 🎁</h1>
+  <h1>🎀 My girl was born today 🎀</h1>
+
+  <!-- SLIDESHOW -->
+  <img id="slide" class="photo" src="photo1.jpg">
+
+  <p>Yes, it's YOU! A little surprise awaits...</p>
+  <button onclick="start()">💖 Start the surprise</button>
 </div>
 
-<!-- SCREEN 2 -->
+<!-- Screen 2 -->
 <div class="screen" id="screen2">
-<h1 class="glow">🎉 Happy Birthday Animesh da 🎉</h1>
-<div class="cake">🎂</div>
-<button onclick="next(3)">Next ➡</button>
+  <h2>🎂 Swipe anywhere to cut the cake!</h2>
+  <img src="cake.png" class="cake">
 </div>
 
-<!-- SCREEN 3 PHOTO -->
+<!-- Screen 3 -->
 <div class="screen" id="screen3">
-<img src="Screenshot_20260327_134939_Facebook.jpg" class="photo">
-<button onclick="next(4)">Next ➡</button>
-</div>
+  <h1>🎉 Happy Birthday Animesh da 🎉</h1>
 
-<!-- SCREEN 4 MESSAGE -->
-<div class="screen" id="screen4">
-<h2>
-Happy Birthday Animesh da 🎉<br><br>
-Aajke phone korte iccha chilo, kintu bhablam hoyto disturb hoye jabe…because goto 2 bar jokhon phone korlam tokhon tomar kotha sune mone hochilo je tomar kotha bolar iche nei tai message e wish korlam 😊<br><br>
+  <img class="photo" src="photo1.jpg">
+
+  <p>
+Happy Birthday Animesh da 🎉 <br><br>
+Aajke phone korte iccha chilo, kintu bhablam hoyto disturb hoye jabe…<br>
+because goto 2 bar jokhon phone korlam tokhon tomar kotha sune mone hochilo je tomar kotha bolar iche nei tai message e wish korlam.😊<br><br>
 Sob somoy nijer moto thako, aar onek khusi theko ❤️
-</h2>
-
-<div class="hearts" id="hearts"></div>
+  </p>
 </div>
 
-<script>
-let current = 1;
-
-function next(n){
-document.getElementById("screen"+current).classList.remove("active");
-current = n;
-document.getElementById("screen"+current).classList.add("active");
-}
-
-// auto next
-setTimeout(()=>{ next(2); },2000);
-
-// HEART GENERATOR
-function createHeart(){
-let heart = document.createElement("span");
-heart.innerHTML = "❤️";
-heart.style.left = Math.random()*100 + "vw";
-heart.style.animationDuration = (Math.random()*3+2)+"s";
-document.getElementById("hearts").appendChild(heart);
-
-setTimeout(()=>{ heart.remove(); },5000);
-}
-
-setInterval(createHeart,300);
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
