@@ -1,28 +1,22 @@
-// start button
-function start() {
-  document.getElementById("music").play();
-  next(2);
-}
-
 // screen change
 function next(n) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   document.getElementById("screen" + n).classList.add("active");
-}
 
-// swipe
-let touched = false;
-
-document.addEventListener("touchstart", () => touched = true);
-
-document.addEventListener("touchmove", () => {
-  if (touched) {
-    next(3);
+  if (n === 3) {
+    typeText();
     hearts();
     fireworks();
-    touched = false;
   }
-});
+}
+
+// 🎁 gift open
+function openGift() {
+  document.querySelector(".gift").innerHTML = "🎉";
+  setTimeout(() => {
+    next(3);
+  }, 1000);
+}
 
 // ❤️ hearts
 function hearts() {
@@ -50,11 +44,40 @@ function fireworks() {
   }, 200);
 }
 
-// slideshow
-let photos = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+// ✨ typing effect
+let message = `Happy Birthday Animesh da 🎉
+
+Aajke phone korte iccha chilo, kintu bhablam hoyto disturb hoye jabe…
+because goto 2 bar jokhon phone korlam tokhon tomar kotha sune mone hochilo je tomar kotha bolar iche nei tai message e wish korlam.😊
+
+Sob somoy nijer moto thako, aar onek khusi theko ❤️`;
+
 let i = 0;
 
+function typeText() {
+  let speed = 40;
+  let target = document.getElementById("typing");
+
+  function typing() {
+    if (i < message.length) {
+      target.innerHTML += message.charAt(i);
+      i++;
+      setTimeout(typing, speed);
+    }
+  }
+
+  typing();
+}
+
+// slideshow
+let photos = [
+"Screenshot_20260327_134939_Facebook.jpg",
+"Screenshot_20260327_135051_Lite.jpg"
+];
+
+let j = 0;
+
 setInterval(() => {
-  i = (i + 1) % photos.length;
-  document.getElementById("slide").src = photos[i];
+  j = (j + 1) % photos.length;
+  document.getElementById("slide").src = photos[j];
 }, 2000);
