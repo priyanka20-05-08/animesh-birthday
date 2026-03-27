@@ -37,10 +37,17 @@ button {
   border-radius: 20px;
 }
 
-/* Cake */
-.cake {
-  width: 200px;
-  margin-top: 20px;
+/* Gift box */
+.gift {
+  font-size: 100px;
+  margin-top: 50px;
+  cursor: pointer;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
 /* Hearts */
