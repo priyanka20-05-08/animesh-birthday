@@ -7,38 +7,32 @@
 
 <body>
 
-<!-- MUSIC -->
-<audio id="music" src="music.mp3"></audio>
-
 <!-- Screen 1 -->
 <div class="screen active" id="screen1">
   <h1>🎀 My girl was born today 🎀</h1>
 
-  <!-- SLIDESHOW -->
-  <img id="slide" class="photo" src="photo1.jpg">
+  <img id="slide" class="photo" src="Screenshot_20260327_134939_Facebook.jpg">
 
   <p>Yes, it's YOU! A little surprise awaits...</p>
-  <button onclick="start()">💖 Start the surprise</button>
+  <button onclick="next(2)">💖 Start the surprise</button>
 </div>
 
-<!-- Screen 2 -->
+<!-- Screen 2 (Gift box) -->
 <div class="screen" id="screen2">
-  <h2>🎂 Swipe anywhere to cut the cake!</h2>
-  <img src="cake.png" class="cake">
+  <h2>🎁 Tap the gift to open!</h2>
+
+  <div class="gift" onclick="openGift()">
+    🎁
+  </div>
 </div>
 
 <!-- Screen 3 -->
 <div class="screen" id="screen3">
   <h1>🎉 Happy Birthday Animesh da 🎉</h1>
 
-  <img class="photo" src="photo1.jpg">
+  <img class="photo" src="Screenshot_20260327_135051_Lite.jpg">
 
-  <p>
-Happy Birthday Animesh da 🎉 <br><br>
-Aajke phone korte iccha chilo, kintu bhablam hoyto disturb hoye jabe…<br>
-because goto 2 bar jokhon phone korlam tokhon tomar kotha sune mone hochilo je tomar kotha bolar iche nei tai message e wish korlam.😊<br><br>
-Sob somoy nijer moto thako, aar onek khusi theko ❤️
-  </p>
+  <p id="typing"></p>
 </div>
 
 <script src="script.js"></script>
