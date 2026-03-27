@@ -50,7 +50,8 @@ let message = `Happy Birthday Animesh da 🎉
 Aajke phone korte iccha chilo, kintu bhablam hoyto disturb hoye jabe…
 because goto 2 bar jokhon phone korlam tokhon tomar kotha sune mone hochilo je tomar kotha bolar iche nei tai message e wish korlam.😊
 
-Sob somoy nijer moto thako, aar onek khusi theko ❤️`;
+Sob somoy nijer moto thako, aar onek khusi theko ❤️
+Birthday treat ta o kintu Durga Puja te nebo... miss korle kintu cholbe na 😌💖`;
 
 let i = 0;
 
