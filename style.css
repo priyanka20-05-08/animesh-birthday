@@ -1,23 +1,69 @@
 body {
-background: black;
-color: white;
-text-align: center;
-font-family: Arial;
+  margin: 0;
+  font-family: cursive;
+  background: #ffd6e7;
+  text-align: center;
 }
 
+/* Screen */
 .screen {
-display: none;
-height: 100vh;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  display: none;
+  height: 100vh;
+  padding: 30px;
 }
 
 .active {
-display: flex;
+  display: block;
 }
 
+/* Photo */
 .photo {
-width: 250px;
-border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px 0;
+  border: 4px solid white;
+  box-shadow: 0 0 20px pink;
+}
+
+/* Button */
+button {
+  padding: 15px 25px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+/* Cake */
+.cake {
+  width: 200px;
+  margin-top: 20px;
+}
+
+/* Hearts */
+.heart {
+  position: fixed;
+  color: red;
+  font-size: 20px;
+  animation: float 4s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity:1; }
+  100% { transform: translateY(-500px); opacity:0; }
+}
+
+/* Fireworks */
+.fire {
+  position: fixed;
+  font-size: 25px;
+  animation: boom 1s linear;
+}
+
+@keyframes boom {
+  0% { transform: scale(0); }
+  100% { transform: scale(2); opacity:0; }
 }
