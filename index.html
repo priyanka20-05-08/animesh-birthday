@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Happy Birthday 💖</title>
+<title>Happy Birthday 💖</title>
 
-  <!-- Romantic font -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- Loading -->
+<div class="screen active" id="loading">
+  <h1>Loading your surprise... 🎁</h1>
+</div>
+
 <!-- Screen 1 -->
-<div class="screen active" id="screen1">
+<div class="screen" id="screen1">
   <h1>💖 Someone very special to my heart was born today 💖</h1>
+
+  <img id="slide" class="photo" src="Screenshot_20260327_134939_Facebook.jpg">
+
   <button onclick="next(2)">Start 💖</button>
 </div>
 
-<!-- Screen 2 (Cake swipe) -->
+<!-- Screen 2 -->
 <div class="screen" id="screen2">
   <h2>🎂 Swipe to cut the cake!</h2>
   <div class="cake">🎂</div>
 </div>
 
-<!-- Screen 3 (Candle) -->
+<!-- Screen 3 -->
 <div class="screen" id="screen3">
   <h2>🕯️ Tap to blow the candle</h2>
   <div id="candle" class="candle">🕯️</div>
 </div>
 
-<!-- Screen 4 (Message) -->
+<!-- Screen 4 -->
 <div class="screen" id="screen4">
   <h2>🎉 Happy Birthday Animesh da 🎉</h2>
+  <img class="photo" src="Screenshot_20260327_135051_Lite.jpg">
   <p id="typing"></p>
 </div>
 
