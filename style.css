@@ -37,7 +37,7 @@ button {
   border-radius: 20px;
 }
 
-/* Gift box */
+/* Gift */
 .gift {
   font-size: 100px;
   margin-top: 50px;
@@ -50,7 +50,7 @@ button {
   50% { transform: translateY(-20px); }
 }
 
-/* Hearts */
+/* ❤️ Hearts */
 .heart {
   position: fixed;
   color: red;
@@ -59,11 +59,11 @@ button {
 }
 
 @keyframes float {
-  0% { transform: translateY(0); opacity:1; }
+  0% { transform: translateY(0); }
   100% { transform: translateY(-500px); opacity:0; }
 }
 
-/* Fireworks */
+/* 🎆 Fireworks */
 .fire {
   position: fixed;
   font-size: 25px;
@@ -73,4 +73,15 @@ button {
 @keyframes boom {
   0% { transform: scale(0); }
   100% { transform: scale(2); opacity:0; }
+}
+
+/* 💖 Typing message (ROMANTIC FONT) */
+#typing {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  line-height: 1.8;
+  padding: 20px;
+  max-width: 90%;
+  margin: auto;
+  color: #ff2e63;
 }
