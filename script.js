@@ -1,4 +1,3 @@
-// screen change
 function next(n) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   document.getElementById("screen" + n).classList.add("active");
@@ -44,26 +43,26 @@ function fireworks() {
   }, 200);
 }
 
-// ✨ typing effect
+// ✍️ typing message
 let message = `Happy Birthday Animesh da 🎉
 
 Aajke phone korte iccha chilo, kintu bhablam hoyto disturb hoye jabe…
 because goto 2 bar jokhon phone korlam tokhon tomar kotha sune mone hochilo je tomar kotha bolar iche nei tai message e wish korlam.😊
 
-Sob somoy nijer moto thako, aar onek khusi theko ❤️
-Birthday treat ta o kintu Durga Puja te nebo... miss korle kintu cholbe na 😌💖`;
+Birthday treat ta o kintu Durga Puja te nebo 😌🎁
+
+Sob somoy nijer moto thako, aar onek khusi theko ❤️`;
 
 let i = 0;
 
 function typeText() {
-  let speed = 40;
   let target = document.getElementById("typing");
 
   function typing() {
     if (i < message.length) {
       target.innerHTML += message.charAt(i);
       i++;
-      setTimeout(typing, speed);
+      setTimeout(typing, 40);
     }
   }
 
